@@ -1,0 +1,601 @@
+@use 'assets/scss/resets' as *;
+@use 'assets/scss/fonts' as *;
+@use 'assets/scss/globals' as *;
+@use 'assets/scss/veriables' as *;
+@use 'assets/scss/mixin' as *;
+@use 'assets/scss/function' as *;
+
+
+.header
+    background-color: $color-secondary
+    padding: rem(32) rem(15) rem(40) rem(15) 
+    &__container
+        display: flex 
+        align-items: center
+        justify-content: space-between
+        position: relative
+        
+    &__logo
+        font-size: rem(18)
+        letter-spacing: 10%
+        
+        top: rem(25)
+        z-index: 7
+        span
+            padding-left: rem(5)
+            margin-bottom: rem(-2)
+        
+    &__nav
+        display: inline-block
+        position: fixed
+        top: 0
+        left: 49.9%
+        transform: translateX(-50%)
+        z-index: 99
+        width: 100%
+        max-width: rem(460)
+        height: 100vh
+        overflow: hidden
+        background-color: $color-base
+        z-index: 99
+        transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s
+        opacity: 0
+        visibility: hidden
+
+        &--active
+            opacity: 1
+            visibility: visible
+    &__title
+        font-weight: 600
+        font-size: 36px
+        line-height: 40px
+        letter-spacing: 0.06em
+        color: #252525
+        padding-top: rem(40)
+        padding-left: rem(40)
+        margin-bottom: rem(39)
+
+    &__item:nth-child(4)
+        padding-top: rem(10)
+        padding-left: rem(45)
+    &__list
+        align-items: center
+        flex-direction: column
+        gap: rem(8)
+        position: relative
+         
+
+        font-size: rem(20)
+        font-weight: 500
+        color: #252525
+        line-height: 28px
+        left: rem(44)
+    &__link
+        display: flex
+        align-items: center
+        margin-bottom: rem(8)
+        span
+            padding-left: rem(8)
+    
+        
+
+        
+
+    &__sprite-icon
+        width: rem(24)
+        height: rem(24)
+        fill: transparent
+        stroke: #000
+
+    .icon-bascet,
+    .icon-home
+        width: rem(22)
+        height: rem(22)
+
+          
+
+    &__burger
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: space-between
+        width: 40px
+        height: 30px
+        
+        z-index: 99
+        padding: rem(6)
+
+    &__line--1, 
+    &__line--2, 
+    &__line--3
+        display: block
+        width: 100%
+        height: 2px
+        background: #000
+        border-radius: 2px
+        transition: transform 0.3s ease, opacity 0.3s ease
+
+.burger-menu--active 
+    display: block
+    position: absolute
+    top: rem(14)
+    right: rem(15) 
+
+    .header__line--1, .header__line--2
+        position: absolute
+        top: 50%
+        left: 52%
+        width: 80%
+        margin-left: -45%
+
+        transition: transform 0.3s ease
+   
+    .header__line--1
+        transform: rotate(45deg)
+        
+    .header__line--2
+        transform: rotate(-45deg) 
+        
+    .header__line--3
+        opacity: 0
+        transform: translateY(-10px)
+// -----------  welcome-section -----------
+
+.welcome-section
+    display: grid
+    align-items: end
+    position: relative
+    min-width: 100%
+    height: rem(400)
+    margin-top: rem(-15)
+    margin-bottom: rem(48)
+    padding: 0 rem(15)
+    background-image: url("../assets/images/bg-restorant.png")
+    
+    background-position-y: 700px
+    border-radius: rem(20)
+
+    &::before
+        content: ""
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.5)
+        border-radius: rem(20)
+        z-index: -1 
+
+   
+    &__title
+        font-size: rem(36)
+        font-weight: 400
+        line-height: rem(40)
+        color: #ffffff
+
+
+    &__desc
+        width: 60%
+        font-size: rem(16)
+        color: $color-base
+        margin-bottom: rem(32)  
+
+    &__btn
+        display: inline-block
+        min-width: 100%
+        font-size: rem(18)
+        text-align: center
+        color: $color-base
+        padding: rem(12) 0
+        background: $color-primary
+        border-radius: rem(12)
+        margin-bottom: rem(8)
+
+// ------------------- section Popular -------------
+.popular
+    padding: 0 rem(15)
+    margin-bottom: rem(40)
+    
+    &__title
+        font-size: rem(20)
+        font-weight: 600
+        color: #111827
+        margin-bottom: rem(16)
+    &__wrapper
+        display: flex
+        align-items: center
+        gap: rem(16)
+        margin-top: auto
+        
+        overflow-x: auto
+        scroll-snap-type: x mandatory
+        scroll-behavior: smooth
+        &::-webkit-scrollbar
+            display: none
+     
+
+.popular-card 
+    display: flex
+    flex-direction: column
+    position: relative
+    flex-shrink: 0
+    max-width: rem(242) 
+    min-height: rem(345)
+    border-radius: rem(10)
+    padding: 4px
+        
+    overflow: hidden
+    background-color: $color-base
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06)
+
+    scroll-snap-align: start
+        
+    &__wrapper-img
+        position: relative
+        margin-bottom: rem(12)
+        height: rem(210)
+
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        width: rem(74)
+        height: rem(20)
+        left: rem(8)
+        top: rem(8)
+        z-index: 2
+        background-image: url("../assets/images/Hit.png")
+        background-repeat: no-repeat
+    &__img
+        object-fit: cover
+        object-position: center
+        margin-bottom: rem(12)
+        border-radius: 10px 10px 0 0
+
+    &__inner-wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between 
+
+    &__title
+        font-size: rem(16)
+        font-weight: 500
+        color: #000
+        margin-bottom: rem(8)
+
+    &__price
+        font-size: rem(16)
+        font-weight: 500
+        color: #252525
+
+    &__desc
+        padding-bottom: rem(16)
+
+    &__add
+        width: rem(40)
+        height: rem(40)
+        border-radius: 50%
+
+    &__sprite-icon
+        display: flex
+        align-items: center
+        justify-content: center
+        width: rem(30)
+        height: rem(30)
+        fill: none
+        stroke: $color-base
+
+    &__counter-btn
+        margin-bottom: rem(8)
+.popular-card__add--active
+    display: none
+        
+.counter-btn
+    display: flex
+    align-items: center
+    justify-content: space-around
+    width: 80%
+    height: rem(40)
+    overflow: hidden
+    padding: rem(4) rem(8)
+    border-radius: rem(20)
+    background-color: $color-primary
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s
+
+
+    
+    &__sprite-icon
+        max-width: rem(24)
+        max-height: rem(24)
+        fill: none
+        stroke: $color-base
+
+    &__current
+        color: $color-base
+
+.counter-btn--active
+    display: none
+        
+// ------------ section odds ------------------
+.odds
+    padding: 0 rem(15)
+    margin-bottom: rem(32)
+.slider-container
+    display: flex
+    flex-direction: column
+    gap: rem(8)
+    width: 100%
+    overflow: hidden
+
+    &__slider-track
+        display: flex
+        
+        align-items: center
+        min-width: 100%
+        height: rem(170)
+
+        margin-bottom: rem(8)
+        transition: transform 0.5s ease-in-out
+    &__slider-item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position: relative
+        min-width: 100%
+        height: rem(170)
+        overflow: hidden
+        padding-left: rem(15) 
+
+        border-radius: rem(20)
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06)
+        margin-bottom: rem(8)
+
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: rem(80)
+            height: rem(25)
+            top: 0
+            left: 50%
+            z-index: 5
+            background-image: url("../assets/images/Ellipse.png")
+            background-repeat: no-repeat
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            width: rem(80)
+            height: rem(25)
+            left: rem(-40)
+            bottom: rem(18)
+            transform: rotate(-138deg)
+            background-image: url("../assets/images/Ellipse.png")
+            background-repeat: no-repeat
+        
+    &__slider-item       
+        align-items: center
+
+        gap: rem(8)
+        min-width: 100%
+        height: rem(170)
+        overflow: hidden
+       
+    &__wrapper-text
+        width: rem(200)
+        
+
+    &__title
+        margin-bottom: rem(12)
+    &__desc
+        span
+            font-weight: 700
+            color: $color-secondary
+    &__wrapper-img
+        width: rem(180)
+        height: 100%
+        
+        overflow: hidden
+        
+    &__img
+        min-width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 0 16px 16px 0
+
+    &__dot
+        display: flex
+        align-items: center
+        object-position: center
+        justify-content: center
+        gap: rem(4)
+        width: 100%
+
+    &__dot-item
+        display: block
+        width: rem(30)
+        height: rem(4)
+        background-color: $color-secondary-soft
+
+
+    .dot--active
+        background-color: $color-secondary
+
+// --------------- top categories -------------
+.top-categories
+    background-color: $color-secondary-soft
+    margin-bottom: rem(32)
+    padding-left: rem(15)
+
+    &__title
+        font-size: rem(16)
+        font-weight: 600
+        text-align: center
+        padding: rem(12) 0
+        color: #000
+
+    &__list
+        
+.category-card
+    display: flex
+    text-align: center
+    gap: rem(16)
+    padding: rem(12) rem(15)
+
+    overflow-x: auto
+    scroll-snap-type: x mandatory
+    scroll-behavior: smooth
+    &::-webkit-scrollbar
+        display: none
+
+    &__item
+        scroll-snap-align: start
+            
+    &__link
+        display: inline-block
+
+    &__icon-wrapper
+        display: flex
+        align-items: center
+        justify-content: center
+        width: rem(100)
+        height: rem(100)
+        background-color: rgba(6, 150, 150, 0.2)
+        border-radius: 100%
+        margin-bottom: rem(6)
+
+
+    &__sprite-icon
+        height: rem(50)
+        fill: transparent
+        stroke: $color-primary
+
+    &__title
+        font-size: rem(16)
+        font-weight: 500
+        color: #391713
+// ----------- offices section --------------
+.offices
+    padding: 0 rem(15)
+    position: relative
+    margin-bottom: rem(50)
+    &__title
+        font-size: rem(16)
+        font-weight: 600
+        color: #000
+        margin-bottom: rem(12)
+
+    &__content
+        display: flex
+        align-items: center
+        gap: rem(16)
+
+        overflow-x: auto
+        scroll-snap-type: x mandatory
+        scroll-behavior: smooth
+        &::-webkit-scrollbar
+            display: none
+
+    &__item
+        scroll-snap-align: start
+
+    &__wrapper-img
+        width: rem(156)
+        height: rem(152)
+        border-radius: rem(16)
+        overflow: hidden
+
+    &__btn
+        position: relative
+        left: rem(8)
+        top: -30px
+        padding: rem(2) rem(12)
+
+    &__bottom-sheet
+
+.bottom-sheet
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    max-width: rem(450)
+    margin: 0 auto
+    background-color: $color-base
+    z-index: 999
+
+    transform: translateY(100%)
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    touch-action: none
+    max-height: 100vh
+
+
+    &--active
+        transform: translateY(0)
+    
+    &__drag-handle
+        width: rem(120)
+        height: rem(3)
+        position: relative
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-color: #000
+        margin-bottom: rem(14)
+        margin-top: rem(20)
+
+        cursor: grab
+
+    &__wrapper
+        display: block
+        min-width: 100%
+        min-height: 100vh
+
+    &__content
+        display: none
+
+        &--active
+            display: block
+
+    &__wrapper-img
+        min-width: 100%
+        border-radius: rem(16) rem(16) 0 0 
+        // padding: rem(170) 
+        overflow: hidden
+        margin-bottom: rem(8)
+
+    &__info-item
+        display: flex
+        align-items: center
+        margin-bottom: rem(4)
+        padding-left: rem(15)   
+
+    &__sprite-icon
+        max-width: rem(16)
+        max-height: rem(16)
+        padding-right: rem(4)
+
+
+    &__actions
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding-top: rem(220)
+
+    &__btn
+        padding: rem(10) rem(32)
+    .btn--p
+        padding: rem(10) rem(71.5)
+
+        
+        
+           
+
+
+
+
+
+
+
+        

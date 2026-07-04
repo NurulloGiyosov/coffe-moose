@@ -1,0 +1,189 @@
+@use '../scss/resets' as *;
+@use '../scss/fonts' as *;
+@use '../scss/globals' as *;
+@use '../scss/veriables' as *;
+@use '../scss/mixin' as *;
+@use '../scss/function' as *;
+    
+.header
+  
+
+  &__container
+    margin-bottom: rem(24)
+
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: rem(16)
+    width: 100%
+
+  &__wrapper-input
+    display: flex
+    align-items: center
+    position: relative
+
+  &__icon-poosh
+    position: absolute
+    width: rem(24)
+    height: rem(24)
+    right: rem(16)
+    fill: none
+    stroke: $color-icon-brand !important
+
+  &__input
+    width: rem(240)
+    height: rem(40)
+    padding: rem(8) rem(16)
+    border-radius: rem(12)
+    background-color: $color-base
+
+  &__wrapper-icons
+    display: flex
+    align-items: center
+    gap: rem(12)
+  &__icon-link
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    min-width: rem(40)
+    min-height: rem(40)
+    border-radius: rem(12)
+    background-color: $color-secondary-soft !important
+
+  &__sprite-icon
+    max-width: rem(24)
+    max-height: rem(24)
+    fill: none
+    stroke: $color-icon-brand !important
+
+.menu-tabs
+  display: flex
+  align-items: center
+  gap: rem(30)
+
+  position: relative
+  width: 100%
+  padding: 0 rem(40)
+  padding-top: rem(26)
+  padding-bottom: rem(60)
+  margin-top: rem(-20)
+  border-radius: rem(12)
+  background-color: $color-primary
+
+  &__indicator
+    position: absolute
+    left: 30px
+    top: 30px
+    height: 84px
+    width: 54px
+    border-radius: rem(24) rem(24) 0 0 
+    background: #FFFFFF
+    
+
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+ 
+
+  &::before,
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    bottom: 0
+    width: rem(20)
+    height: rem(20)
+    background-color: $color-base
+
+  &::before
+    left: calc( -1 *  rem(20))
+    border-radius: 0 0 100% 0
+    box-shadow: 5px 5px 0 5px $color-base
+
+  &::after
+    left: calc( -1 *  rem(20))
+    border-radius: 0 0 100% 0
+    box-shadow: -5px 5px 0 5px $color-base
+
+  &__item
+    width: rem(40)
+    height: rem(52)
+    border-radius: rem(20)
+    background-color: $color-secondary-soft
+    z-index: 1
+    transform: translateY(0)
+    transition: transform 0.3s ease
+
+    &--active
+      transform: translateY(12px)
+      background-color: $color-primary-soft
+      transition: transform 0.3s ease
+
+      .menu-tabs__sprite-icon
+        stroke: $color-icon-brand 
+
+  &__sprite-icon
+    max-width: rem(32) 
+    max-height: rem(32) 
+    fill: none
+    stroke: $color-icon-brand 
+.tab-content
+  position: relative
+  border-radius: rem(28) 
+  margin-top: rem(-40)
+
+  overflow: hidden
+  z-index: 4
+
+  &__card
+    margin-bottom: rem(20)
+    overflow: hidden
+
+  &__wrapper-img
+    width: 100%
+    height: rem(328)
+    border-radius: rem(28)
+    margin-bottom: rem(4)
+    overflow: hidden
+
+  &__img
+
+
+  &__desc
+    display: flex
+    align-items: center
+    margin-bottom: rem(12)
+    padding: 0 rem(15)
+
+  &__title
+    font-size: rem(16)
+    font-weight: 600
+    
+
+  &__rating
+    display: flex
+    align-items: center
+    width: rem(54)
+    height: rem(20)
+    padding-left: rem(8)
+    color: #A16206
+    background-color: #FFF4D9
+    margin-left: rem(45)
+    margin-right: rem(20)
+    border-radius: rem(99)
+
+
+  &__price
+    font-size: rem(16)
+    font-weight: 600
+  &__text
+    padding: 0 rem(15)
+    padding-bottom: rem(16)
+    border-bottom: 1px  solid #ececec
+
+
+
+
+ 
+    
+    

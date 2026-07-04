@@ -1,0 +1,71 @@
+@use './veriables' as *;
+@use './function' as *;
+@use './mixin' as *;
+
+body{
+    font-family: 'Montserrat';
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: 1.2;
+    color: $font-base-color;
+    background-color: #f9f9f9;
+    box-sizing:border-box;
+
+    width: 100%;    
+    max-width: rem(450);
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box
+    
+
+}
+
+.logo--visibili{
+    display: none;
+}
+
+
+.indicator{
+    display: inline-block;
+    flex-shrink: 0;
+    width: rem(20);
+    height: rem(4);
+    background-color: $color-secondary-soft; 
+    border-radius: rem(20);
+}
+
+.no-scroll{
+    overflow: hidden;
+    height: 100%;
+}
+
+.button-primary{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: rem(18);
+    text-align: center;
+    color: $color-base;
+    background: $color-primary;
+    border-radius: rem(12);
+    margin-bottom: rem(8);
+
+    &:active{
+        opacity: 0.8;
+    }
+}
+
+.button-secondary{
+    display: inline-block;
+    font-size: rem(18);
+    text-align: center;
+    color: #000;
+    border: 1px solid $color-primary;
+    border-radius: rem(12);
+    margin-bottom: rem(8);
+
+    &:active{
+        opacity: 0.8;
+    }
+}

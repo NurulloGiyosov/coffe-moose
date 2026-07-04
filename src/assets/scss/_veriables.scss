@@ -1,0 +1,34 @@
+@use './function' as *;
+
+// Семество шрифтов 
+$font-base: 'Monsterrat';
+
+// Палитро цветов для тексты
+$font-base-color: #404040;
+$font-primary-color: #111827;
+$font-secondary-color: #6B7280;
+$font-inverse-color: #FFFFFF;
+
+// политра цветов для фона кнопок в разных состояний 
+$color-primary: #069696;
+$color-error: #DC2626;
+$color-error-soft: #FEE2E2;
+$color-succese: #15A34A;
+$color-succese-soft: #DCFCE7;
+$color-warning: #F59D0A;
+$color-warning-soft: #FFF4C7;
+
+// политра цветов для иконок
+$color-icon-brand: #069696;
+$color-icon-inverse: #FFFFFF;
+$color-icon-primary: #111826;
+$color-icon-secondary: #6B7280;
+
+// Палитро цветов для основного фона и блоков
+$color-primary: #11C2AB;
+$color-primary-soft: #DDF8F4;
+$color-secondary: #f2d53d;
+$color-secondary-soft: #FFF8D7;
+$color-base: #FFFFFF;
+
+

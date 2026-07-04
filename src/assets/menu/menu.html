@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/styleMenu.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>Меню</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+          <a href="/src/index.html" class="header__logo logo"
+          ><img
+            src="../images/icons/logo.svg"
+            alt="Логотип"
+            width="40"
+            height="45"
+          /></a>
+          <nav class="header__nav">
+            <h2 class="header__title">Coffee Moose</h2>
+            <ul class="header__list">
+              <li class="header__item">
+                
+                <a href="#" class="header__link">
+                  <svg class="header__sprite-icon icon-home">
+                    <use href="../images/icons/sprite.svg#home"></use>
+                  </svg>
+                  <span>Главная</span></a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link">
+                  <svg class="header__sprite-icon">
+                    <use href="../images/icons/sprite.svg#menu"></use>
+                  </svg>
+                  <span>Меню</span></a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">
+                  <svg class="header__sprite-icon icon-bascet">
+                    <use href="../images/icons/sprite.svg#bascet"></use>
+                  </svg>
+                  <span>Корзина</span></a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link header__link--left">О нас</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__burger">
+            <span class="header__line--1"></span>
+            <span class="header__line--2"></span>
+            <span class="header__line--3"></span>
+          </button>
+        </div>
+        <div class="header__wrapper">
+          <div class="header__wrapper-input">
+            <input type="text" class="header__input" placeholder="Поиск товаров...">
+            <svg class="header__icon-poosh">
+              <use href="../images/icons/sprite.svg#bascet"></use>
+            </svg>
+          </div>
+          <div class="header__wrapper-icons">
+            <a class="header__icon-link">
+              <svg class="header__sprite-icon">
+                <use class="header__icon" href="../images/icons/sprite.svg#poosh"></use>
+              </svg>
+            </a>
+            <a class="header__icon-link">
+              <svg class="header__sprite-icon">
+                <use class="header__icon" href="../images/icons/sprite.svg#bascet"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+    <div class="menu-tabs">
+      <div class="menu-tabs__indicator"></div>
+      <button class="menu-tabs__item menu-tabs__item--active" data-category ="dish">
+          <svg class="menu-tabs__sprite-icon icon">
+            <use href="../images/icons/sprite.svg#menu"></use>
+          </svg>
+        </button>
+      <button class="menu-tabs__item" data-category ="cake">
+        <svg class="menu-tabs__sprite-icon icon">
+          <use href="../images/icons/sprite.svg#Desserts"></use>
+        </svg>
+      </button>
+      <button class="menu-tabs__item" data-category ="drinks">
+        <svg class="menu-tabs__sprite-icon icon">
+          <use href="../images/icons/sprite.svg#Drinks-1"></use>
+        </svg>
+      </button>
+      <button class="menu-tabs__item" data-category ="desserts">
+        <svg class="menu-tabs__sprite-icon icon">
+          <use href="../images/icons/sprite.svg#Drinks"></use>
+        </svg>
+      </button>
+      <button class="menu-tabs__item" data-category ="drinks2">
+        <svg class="menu-tabs__sprite-icon icon" >
+          <use href="../images/icons/sprite.svg#Desserts-1"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="tab-content">
+    
+      
+    </div>
+
+    <script src="/main.js"></script>
+    <script src="./menu.js"></script>
+</body>
+</html>
