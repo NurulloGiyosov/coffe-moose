@@ -99,6 +99,12 @@ if(dragHandle || bottomSheet){
         item.addEventListener('click', () =>{
             const id = item.dataset.office
 
+             if(menu.classList.contains('bottom-sheet__content--active')){
+                document.body.classList.add('no-scroll')
+            }else{
+                document.body.classList.remove('no-scroll')
+            }
+
             // Убираем активный контент у всех
             bottomSheetContent.forEach(content =>content.classList.remove('bottom-sheet__content--active'))
 
@@ -107,6 +113,7 @@ if(dragHandle || bottomSheet){
 
             // Откыриваем само шторку
             bottomSheet.classList.add('bottom-sheet--active')
+
 
         })
     })

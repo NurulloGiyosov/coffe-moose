@@ -272,12 +272,14 @@ function createCardHtml(item){
                 <div class="tab-content__wrapper-img">
                     <img src="${item.img}" alt="" class="tab-content__img">
                 </div>
-                <div class="tab-content__desc">
+                <div class="tab-content__body">
                     <h2 class="tab-content__title">${item.title}</h2>
-                    <span class="tab-content__rating">${item.rating}</span>
-                    <span class="tab-content__price">${item.price}</span>
+                    <div class ="tab-content__meta">
+                        <span class="tab-content__rating">${item.rating}</span>
+                        <span class="tab-content__price">${item.price}</span>
+                    </div>
                 </div>
-                <p class="tab-content__text">${item.desc}</p>
+                <p class="tab-content__desc">${item.desc}</p>
             </button>`
 }
 

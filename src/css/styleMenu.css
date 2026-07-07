@@ -141,7 +141,7 @@ body {
   stroke: #069696 !important;
 }
 .header__input {
-  width: 15rem;
+  max-width: 15rem;
   height: 2.5rem;
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;
@@ -252,15 +252,21 @@ body {
   margin-bottom: 0.25rem;
   overflow: hidden;
 }
-.tab-content__desc {
+.tab-content__body {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 0.75rem;
   padding: 0 0.9375rem;
 }
 .tab-content__title {
   font-size: 1rem;
   font-weight: 600;
+}
+.tab-content__meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 .tab-content__rating {
   display: flex;
@@ -270,15 +276,14 @@ body {
   padding-left: 0.5rem;
   color: #A16206;
   background-color: #FFF4D9;
-  margin-left: 2.8125rem;
-  margin-right: 1.25rem;
   border-radius: 6.1875rem;
 }
 .tab-content__price {
   font-size: 1rem;
   font-weight: 600;
 }
-.tab-content__text {
+.tab-content__desc {
+  text-align: left;
   padding: 0 0.9375rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ececec;

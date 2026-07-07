@@ -32,7 +32,7 @@
     stroke: $color-icon-brand !important
 
   &__input
-    width: rem(240)
+    max-width: rem(240)
     height: rem(40)
     padding: rem(8) rem(16)
     border-radius: rem(12)
@@ -146,19 +146,20 @@
     margin-bottom: rem(4)
     overflow: hidden
 
-  &__img
-
-
-  &__desc
+  &__body
     display: flex
     align-items: center
+    justify-content: space-between
     margin-bottom: rem(12)
     padding: 0 rem(15)
 
   &__title
     font-size: rem(16)
     font-weight: 600
-    
+  &__meta 
+    display: flex
+    align-items: center
+    gap: rem(20)    
 
   &__rating
     display: flex
@@ -168,15 +169,14 @@
     padding-left: rem(8)
     color: #A16206
     background-color: #FFF4D9
-    margin-left: rem(45)
-    margin-right: rem(20)
     border-radius: rem(99)
 
 
   &__price
     font-size: rem(16)
     font-weight: 600
-  &__text
+  &__desc
+    text-align: left
     padding: 0 rem(15)
     padding-bottom: rem(16)
     border-bottom: 1px  solid #ececec
