@@ -130,27 +130,39 @@ body {
 .header__wrapper-input {
   display: flex;
   align-items: center;
+  width: 100%;
   position: relative;
 }
 .header__icon-poosh {
   position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
   right: 1rem;
-  fill: none;
-  stroke: #069696 !important;
+  stroke: rgba(6, 150, 150, 0.7);
 }
 .header__input {
-  max-width: 15rem;
+  width: 100%;
   height: 2.5rem;
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;
   background-color: #FFFFFF;
 }
+.header__input:focus {
+  outline: none;
+}
+.header__input:focus-visible {
+  outline: 1px solid #11C2AB;
+}
 .header__wrapper-icons {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+.header__wrapper-icons .header__sprite-icon {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  stroke: #069696 !important;
+  fill: none;
 }
 .header__icon-link {
   display: flex;
@@ -161,20 +173,14 @@ body {
   border-radius: 0.75rem;
   background-color: #FFF8D7 !important;
 }
-.header__sprite-icon {
-  max-width: 1.5rem;
-  max-height: 1.5rem;
-  fill: none;
-  stroke: #069696 !important;
-}
 
 .menu-tabs {
   display: flex;
   align-items: center;
-  gap: 1.875rem;
+  justify-content: space-between;
+  padding: 0 2.5rem;
   position: relative;
   width: 100%;
-  padding: 0 2.5rem;
   padding-top: 1.625rem;
   padding-bottom: 3.75rem;
   margin-top: -1.25rem;
@@ -183,32 +189,10 @@ body {
 }
 .menu-tabs__indicator {
   position: absolute;
-  left: 30px;
   top: 30px;
-  height: 84px;
-  width: 54px;
-  border-radius: 1.5rem 1.5rem 0 0;
-  background: #FFFFFF;
+  width: 5.5rem;
+  height: 4rem;
   transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.menu-tabs::before, .menu-tabs::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: #FFFFFF;
-}
-.menu-tabs::before {
-  left: -1.25rem;
-  border-radius: 0 0 100% 0;
-  box-shadow: 5px 5px 0 5px #FFFFFF;
-}
-.menu-tabs::after {
-  left: -1.25rem;
-  border-radius: 0 0 100% 0;
-  box-shadow: -5px 5px 0 5px #FFFFFF;
 }
 .menu-tabs__item {
   width: 2.5rem;
@@ -228,7 +212,7 @@ body {
   stroke: #069696;
 }
 .menu-tabs__sprite-icon {
-  max-width: 2rem;
+  max-width: 1.5rem;
   max-height: 2rem;
   fill: none;
   stroke: #069696;
@@ -237,7 +221,9 @@ body {
 .tab-content {
   position: relative;
   border-radius: 1.75rem;
-  margin-top: -2.5rem;
+  background-color: #FFFFFF;
+  margin-top: -2.8125rem;
+  padding: 1rem;
   overflow: hidden;
   z-index: 4;
 }
@@ -247,7 +233,7 @@ body {
 }
 .tab-content__wrapper-img {
   width: 100%;
-  height: 20.5rem;
+  height: 10.875rem;
   border-radius: 1.75rem;
   margin-bottom: 0.25rem;
   overflow: hidden;
@@ -271,12 +257,23 @@ body {
 .tab-content__rating {
   display: flex;
   align-items: center;
+  position: relative;
   width: 3.375rem;
   height: 1.25rem;
   padding-left: 0.5rem;
   color: #A16206;
   background-color: #FFF4D9;
   border-radius: 6.1875rem;
+}
+.tab-content__rating::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-image: url("../assets/images/star.png");
 }
 .tab-content__price {
   font-size: 1rem;

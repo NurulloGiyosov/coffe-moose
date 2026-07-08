@@ -34,7 +34,7 @@ window.addEventListener('load', () =>{
 const menuData = {
     dish: [
     {
-        img: '../images/coffee.png',
+        img: '../images/egg.png',
         title: 'Homemade-Cappuccino',
         rating: 4.7,
         price: '56c',
@@ -127,7 +127,7 @@ const menuData = {
         ],
     desserts: [
     {
-        img: '../images/Homemade-Cappuccino.png',
+        img: '../images/egg-2.png',
         title: 'Homemade-Cappuccino',
         rating: 4.7,
         price: '56c',

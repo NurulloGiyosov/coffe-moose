@@ -26,7 +26,7 @@ window.addEventListener('click', (event) =>{
 
     if(event.target.closest('.popular-card__add')){
         btnAdd.classList.add('popular-card__add--active')
-        counterWrapperBtn.classList.remove('counter-btn--active')
+        counterWrapperBtn.classList.add('counter-btn--active')
         if(current) current.textContent = 1
     }
 
@@ -40,7 +40,7 @@ window.addEventListener('click', (event) =>{
 
         if(count === 1){
             btnAdd.classList.remove('popular-card__add--active')
-            counterWrapperBtn.classList.add('counter-btn--active')
+            counterWrapperBtn.classList.remove('counter-btn--active')
         }else{
             current.textContent = count - 1
         }  

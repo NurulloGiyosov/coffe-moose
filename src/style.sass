@@ -74,24 +74,23 @@
         align-items: center
         margin-bottom: rem(8)
         span
-            padding-left: rem(8)
-    
-        
-
-        
+            padding-left: rem(8)  
 
     &__sprite-icon
         width: rem(24)
         height: rem(24)
-        fill: transparent
+        fill: none
         stroke: #000
 
-    .icon-bascet,
+    .icon-bascet
+        width: rem(22)
+        height: rem(22)
     .icon-home
         width: rem(22)
         height: rem(22)
+        fill: #000
+        stroke: none !important
 
-          
 
     &__burger
         display: flex
@@ -293,15 +292,17 @@
     display: flex
     align-items: center
     justify-content: space-around
-    width: 80%
-    height: rem(40)
-    overflow: hidden
-    padding: rem(4) rem(8)
     border-radius: rem(20)
     background-color: $color-primary
-    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s
 
-
+    opacity: 0
+    visibility: hidden
+    max-width: 0
+    height: 0
+    transition: max-width 0.4s ease, height 0.4s ease, opacity 0.3s ease, visibility 0.4s
+        
+    & > *
+        flex-shrink: 0
     
     &__sprite-icon
         max-width: rem(24)
@@ -314,7 +315,14 @@
         color: $color-base
 
 .counter-btn--active
-    display: none
+    max-width: rem(180)
+    height: rem(40)
+
+    opacity: 1
+    visibility: visible
+    transition: max-width 0.4s ease, opacity 0.3s ease, visibility 0.4s
+
+        
         
 // ------------ section odds ------------------
 .odds
@@ -571,6 +579,12 @@
         overflow: hidden
         margin-bottom: rem(8)
 
+    &__wrapper-img--carta
+        height: rem(180)
+        border-radius: none
+        padding-top: rem(8)
+        margin-bottom: rem(32)
+
     &__info-group
         position: relative
         background-color: $color-base
@@ -587,9 +601,10 @@
         padding-left: rem(15)   
 
     &__sprite-icon
-        stroke: rgba(0, 0, 0, 0.7)
         max-width: rem(16)
         max-height: rem(16)
+        fill: #000
+        stroke: none
         padding-right: rem(4)
 
 
@@ -598,7 +613,7 @@
         flex-direction: column
         align-items: center
         justify-content: center
-        padding-top: rem(220)
+        // padding-top: rem(220)
 
     &__btn
         padding: rem(10) rem(32)

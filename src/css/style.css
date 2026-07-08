@@ -193,13 +193,18 @@ body {
 .header__sprite-icon {
   width: 1.5rem;
   height: 1.5rem;
-  fill: transparent;
+  fill: none;
   stroke: #000;
 }
-.header .icon-bascet,
+.header .icon-bascet {
+  width: 1.375rem;
+  height: 1.375rem;
+}
 .header .icon-home {
   width: 1.375rem;
   height: 1.375rem;
+  fill: #000;
+  stroke: none !important;
 }
 .header__burger {
   display: flex;
@@ -400,13 +405,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 80%;
-  height: 2.5rem;
-  overflow: hidden;
-  padding: 0.25rem 0.5rem;
   border-radius: 1.25rem;
   background-color: #11C2AB;
-  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  max-width: 0;
+  height: 0;
+  transition: max-width 0.4s ease, height 0.4s ease, opacity 0.3s ease, visibility 0.4s;
+}
+.counter-btn > * {
+  flex-shrink: 0;
 }
 .counter-btn__sprite-icon {
   max-width: 1.5rem;
@@ -420,7 +428,11 @@ body {
 }
 
 .counter-btn--active {
-  display: none;
+  max-width: 11.25rem;
+  height: 2.5rem;
+  opacity: 1;
+  visibility: visible;
+  transition: max-width 0.4s ease, opacity 0.3s ease, visibility 0.4s;
 }
 
 .odds {
@@ -673,6 +685,12 @@ body {
   overflow: hidden;
   margin-bottom: 0.5rem;
 }
+.bottom-sheet__wrapper-img--carta {
+  height: 11.25rem;
+  border-radius: none;
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+}
 .bottom-sheet__info-group {
   position: relative;
   background-color: #FFFFFF;
@@ -689,9 +707,10 @@ body {
   padding-left: 0.9375rem;
 }
 .bottom-sheet__sprite-icon {
-  stroke: rgba(0, 0, 0, 0.7);
   max-width: 1rem;
   max-height: 1rem;
+  fill: #000;
+  stroke: none;
   padding-right: 0.25rem;
 }
 .bottom-sheet__actions {
@@ -699,7 +718,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 13.75rem;
 }
 .bottom-sheet__btn {
   padding: 0.625rem 2rem;
