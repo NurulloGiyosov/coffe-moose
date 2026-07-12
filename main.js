@@ -39,8 +39,11 @@ window.addEventListener('click', (event) =>{
         let count = parseInt(current.textContent) || 1
 
         if(count === 1){
-            btnAdd.classList.remove('popular-card__add--active')
-            counterWrapperBtn.classList.remove('counter-btn--active')
+            setTimeout(() => {
+                btnAdd.classList.remove('popular-card__add--active')
+            }, 300);
+            counterWrapperBtn.classList.remove('counter-btn--active') 
+
         }else{
             current.textContent = count - 1
         }  

@@ -159,12 +159,12 @@ body {
 }
 .header__title {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 40px;
   letter-spacing: 0.06em;
   color: #252525;
   padding-top: 2.5rem;
-  padding-left: 2.5rem;
+  padding-left: 1.25rem;
   margin-bottom: 1.25rem;
 }
 .header__item:nth-child(4) {
@@ -380,9 +380,10 @@ body {
   padding-bottom: 1rem;
 }
 .popular-card__add {
-  width: 2.5rem;
+  max-width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
+  transition: max-width 0.3s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 .popular-card__sprite-icon {
   display: flex;
@@ -398,7 +399,11 @@ body {
 }
 
 .popular-card__add--active {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  max-width: 0;
+  height: 0;
+  transition: max-width 0.4s ease-in-out, opacity 0.3s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 .counter-btn {
@@ -411,9 +416,10 @@ body {
   visibility: hidden;
   max-width: 0;
   height: 0;
-  transition: max-width 0.4s ease, height 0.4s ease, opacity 0.3s ease, visibility 0.4s;
+  transition: max-width 0.4s ease-in-out, height 0.4s ease-in-out, opacity 0.3s ease-in-out, visibility 0.4s ease-in-out;
 }
 .counter-btn > * {
+  padding-top: 0.3125rem;
   flex-shrink: 0;
 }
 .counter-btn__sprite-icon {
@@ -432,7 +438,7 @@ body {
   height: 2.5rem;
   opacity: 1;
   visibility: visible;
-  transition: max-width 0.4s ease, opacity 0.3s ease, visibility 0.4s;
+  transition: max-width 0.4s ease, opacity 0.3s ease, visibility 0.4s ease-in-out;
 }
 
 .odds {
@@ -535,6 +541,7 @@ body {
   width: 1.875rem;
   height: 0.25rem;
   background-color: #FFF8D7;
+  border-radius: 1.25rem;
 }
 .slider-container .dot--active {
   background-color: #f2d53d;
@@ -680,16 +687,16 @@ body {
 }
 .bottom-sheet__wrapper-img {
   min-width: 100%;
-  height: 16.875rem;
+  height: clamp(200px, 35vh, 350px);
   border-radius: 1rem 1rem 0 0;
   overflow: hidden;
-  margin-bottom: 0.5rem;
 }
 .bottom-sheet__wrapper-img--carta {
-  height: 11.25rem;
+  min-height: 11.25rem;
   border-radius: none;
   padding-top: 0.5rem;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 .bottom-sheet__info-group {
   position: relative;
@@ -718,10 +725,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: auto;
 }
 .bottom-sheet__btn {
   padding: 0.625rem 2rem;
 }
 .bottom-sheet .btn--p {
   padding: 0.625rem 4.46875rem;
+  margin-bottom: 0.875rem;
 }/*# sourceMappingURL=style.css.map */

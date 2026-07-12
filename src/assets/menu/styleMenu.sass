@@ -83,6 +83,7 @@
     top: 30px
     width: rem(88)
     height: rem(64)
+    object-fit: cover
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 
   &__item
@@ -111,7 +112,7 @@
   position: relative
   border-radius: rem(28)
   background-color: $color-base 
-  margin-top: rem(-45)
+  margin-top: rem(-47)
   padding: rem(16)
 
   overflow: hidden
@@ -154,15 +155,16 @@
     background-color: #FFF4D9
     border-radius: rem(99)
 
-    &::after
+    &::before
       content: ""
       display: block
       position: absolute
-      left: 0
-      top: 0
+      right: rem(8)
+      bottom: rem(3)
       width: rem(12)
       height: rem(12)
       background-image: url("../assets/images/star.png")
+      background-repeat: no-repeat
 
 
   &__price
